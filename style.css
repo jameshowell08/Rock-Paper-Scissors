@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: whitesmoke;
+}
+.container {
+    background: #fff;
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.container.start .user-result{
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform: translateY(10px);
+    }
+}
+.container.start .cpu-result{
+    animation: cpuShake 0.7s ease infinite;
+}
+@keyframes cpuShake {
+    50%{
+        transform: translateY(10px);
+    }
+}
+.result-image {
+    display: flex;
+    column-gap: 7rem;
+}
+.result-image img{
+    width: 100px;
+}
+.user-result img {
+    transform: rotate(90deg);
+}
+.cpu-result img {
+    transform:rotate(-90deg) rotateY(180deg);
+}
+.result{
+    text-align: center;
+    font-size: 2rem;
+    color :black;
+    margin-top: 1.5rem;
+}
+
+.option-images{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.option-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3 ease;
+    cursor: pointer;
+}
+.option-image:hover{
+    opacity: 1;
+}
+.option-image.active{
+    opacity: 1;
+}
+.option-image img {
+    width: 50px;
+    height: 80px;
+    pointer-events: none;
+}
+.option-image p {
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+.score{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:20px;
+    padding:10px
+}
